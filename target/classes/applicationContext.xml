@@ -10,21 +10,23 @@
 
 <!--    <context:property-placeholder location="musicPlayer.properties"/>-->
 
-    <util:list id="musicList">
-        <bean id="rapMusic" class="ua.khshanovskyi.springcourse.RapMusic"/>
-        <bean id="classicalMusic" class="ua.khshanovskyi.springcourse.ClassicalMusic"/>
-        <bean id="rockMusic" class="ua.khshanovskyi.springcourse.RockMusic"/>
-    </util:list>
-    <bean id="music"
-        class="ua.khshanovskyi.springcourse.RapMusic">
-    </bean>
-    <bean id="musicPlayer" class="ua.khshanovskyi.springcourse.MusicPlayer">
-<!--        <constructor-arg ref="music"/>-->
-<!--        <property name="music" ref="music"/>-->
-        <property name="name" value="Sony"/>
-        <property name="volume" value="60"/>
-<!--        <property name="name" value="${musicPlayer.name}"/>-->
-<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
-    </bean>
+    <context:component-scan base-package="ua.khshanovskyi.springcourse"/>
+
+<!--    <util:list id="musicList">-->
+<!--        <bean id="rapMusic" class="ua.khshanovskyi.springcourse.RapMusic"/>-->
+<!--        <bean id="classicalMusic" class="ua.khshanovskyi.springcourse.ClassicalMusic"/>-->
+<!--        <bean id="rockMusic" class="ua.khshanovskyi.springcourse.RockMusic"/>-->
+<!--    </util:list>-->
+<!--    <bean id="music"-->
+<!--        class="ua.khshanovskyi.springcourse.RapMusic">-->
+<!--    </bean>-->
+<!--    <bean id="musicPlayer" class="ua.khshanovskyi.springcourse.MusicPlayer" scope="prototype">-->
+<!--&lt;!&ndash;        <constructor-arg ref="music"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="music" ref="music"/>&ndash;&gt;-->
+<!--        <property name="name" value="Sony"/>-->
+<!--        <property name="volume" value="60"/>-->
+<!--&lt;!&ndash;        <property name="name" value="${musicPlayer.name}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="volume" value="${musicPlayer.volume}"/>&ndash;&gt;-->
+<!--    </bean>-->
 
 </beans>
