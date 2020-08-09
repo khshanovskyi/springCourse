@@ -1,5 +1,6 @@
 package ua.khshanovskyi.springcourse;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
@@ -8,8 +9,8 @@ import java.util.List;
 public class TestSpring {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
         MusicPlayer player = (MusicPlayer) applicationContext.getBean("musicPlayer");
 //        Music classicalMusic = applicationContext.getBean("classicalMusic", ClassicalMusic.class);
 //        Music rockMusic = applicationContext.getBean("rockMusic", RockMusic.class);
@@ -24,13 +25,13 @@ public class TestSpring {
 //        System.out.println("Player volume after: " + player.getVolume());
 //        player.playMusic(musicList);
 
-        ClassicalMusic classicalMusic = (ClassicalMusic) applicationContext.getBean("classicalMusic");
-        RockMusic rockMusic = (RockMusic) applicationContext.getBean("rockMusic");
-        player.playMusic(Genre.CLASSICAL);
-        player.playMusic(Genre.ROCK);
+//        ClassicalMusic classicalMusic = (ClassicalMusic) applicationContext.getBean("classicalMusic");
+//        RockMusic rockMusic = (RockMusic) applicationContext.getBean("rockMusic");
+//        player.playMusic(Genre.CLASSICAL);
+//        player.playMusic(Genre.ROCK);
 
 
-//        player.playMusic();
+        player.playMusic();
 
         applicationContext.close();
     }

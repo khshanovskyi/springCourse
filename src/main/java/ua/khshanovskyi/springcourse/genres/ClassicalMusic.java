@@ -1,13 +1,12 @@
-package ua.khshanovskyi.springcourse;
+package ua.khshanovskyi.springcourse.genres;
 
 import lombok.Data;
-import org.springframework.stereotype.Component;
+import ua.khshanovskyi.springcourse.Music;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Component
 @Data
 public class ClassicalMusic implements Music {
 

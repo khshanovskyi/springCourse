@@ -10,15 +10,15 @@
 
 <!--    <context:property-placeholder location="musicPlayer.properties"/>-->
 
-    <context:component-scan base-package="ua.khshanovskyi.springcourse"/>
+<!--    <context:component-scan base-package="ua.khshanovskyi.springcourse"/>-->
 
 <!--    <util:list id="musicList">-->
-<!--        <bean id="rapMusic" class="ua.khshanovskyi.springcourse.RapMusic"/>-->
-<!--        <bean id="classicalMusic" class="ua.khshanovskyi.springcourse.ClassicalMusic"/>-->
-<!--        <bean id="rockMusic" class="ua.khshanovskyi.springcourse.RockMusic"/>-->
+<!--        <bean id="rapMusic" class="ua.khshanovskyi.springcourse.genres.RapMusic"/>-->
+<!--        <bean id="classicalMusic" class="ua.khshanovskyi.springcourse.genres.ClassicalMusic"/>-->
+<!--        <bean id="rockMusic" class="ua.khshanovskyi.springcourse.genres.RockMusic"/>-->
 <!--    </util:list>-->
 <!--    <bean id="music"-->
-<!--        class="ua.khshanovskyi.springcourse.RapMusic">-->
+<!--        class="ua.khshanovskyi.springcourse.genres.RapMusic">-->
 <!--    </bean>-->
 <!--    <bean id="musicPlayer" class="ua.khshanovskyi.springcourse.MusicPlayer" scope="prototype">-->
 <!--&lt;!&ndash;        <constructor-arg ref="music"/>&ndash;&gt;-->
